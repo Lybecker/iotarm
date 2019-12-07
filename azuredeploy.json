@@ -32,7 +32,7 @@
         "description": "Specifies the number of provisioned IoT Hub units. Restricted to 1 unit for the F1 SKU. Can be set up to maximum number allowed for subscription."
       }
     },
-      "appName": {
+      "funcAppName": {
       "type": "string",
       "metadata": {
         "description": "The name of the function app."
@@ -41,8 +41,8 @@
   },
   "variables": {
     "consumerGroupName": "[concat(parameters('iotHubName'), '/events/omnioconsumergroup')]",
-    "functionAppName": "[parameters('appName')]",
-    "hostingPlanName": "[parameters('appName')]",
+    "functionAppName": "[parameters('funcAppName')]",
+    "hostingPlanName": "[parameters('funcAppName')]",
     "applicationInsightsName": "[parameters('appName')]",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
     "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
