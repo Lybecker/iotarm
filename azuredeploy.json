@@ -43,7 +43,6 @@
     "consumerGroupName": "[concat(parameters('iotHubName'), '/events/omnioconsumergroup')]",
     "functionAppName": "[parameters('funcAppName')]",
     "hostingPlanName": "[parameters('funcAppName')]",
-    "applicationInsightsName": "[parameters('appName')]",
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'azfunctions')]",
     "storageAccountid": "[concat(resourceGroup().id,'/providers/','Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
     "functionWorkerRuntime": "java",
